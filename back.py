@@ -1,7 +1,7 @@
 from threading import Thread
 import socket
 
-HOST = '127.0.0.1'
+HOST = '127.0.0.1' # WIN+R -> CMD -> IPCONFIG -> Ethernet adapter Ethernet ->  IPv4 Address
 PORT = 1337
 pc_list = {}
 info = ''
