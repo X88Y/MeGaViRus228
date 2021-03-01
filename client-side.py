@@ -8,7 +8,7 @@ def MeGaViRus228():
     import socket
 
     HOST = '127.0.0.1'# WIN+R -> CMD -> IPCONFIG -> Ethernet adapter Ethernet ->  IPv4 Address
-                      # Или IP аддрес сервера
+                      # Или IP адрес сервера
     
     PORT = 1337
 
