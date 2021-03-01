@@ -27,5 +27,5 @@ while 1:
 
         client.send('prep_to_file'.encode('utf-8'))
         client.send(name.encode('utf-8'))
-        print(file_bytes)
+        time.sleep(0.1)
         client.send(file_bytes)
